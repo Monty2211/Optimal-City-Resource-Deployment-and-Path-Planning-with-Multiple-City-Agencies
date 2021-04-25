@@ -1,7 +1,9 @@
 # routes_geoJson  
 # This file is used to create the path from the coordinates found in the json files
 # This helps in displaying the nodes and the paths to be taken by the deployed vehicles.
-
+# Before running the file, we need to install folium, os and base64 file packages
+# To run this file, type routes_geoJson.py in cmd
+# the expected output is an Hyper Test Markup Language <.html> file with a path highlighted across the coordinates and a marker for a home node
 import folium
 from folium import IFrame
 import os
