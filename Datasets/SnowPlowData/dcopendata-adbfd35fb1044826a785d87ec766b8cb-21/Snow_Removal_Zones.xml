@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+<idinfo>
+<citation>
+<citeinfo>
+<origin/>
+<pubdate>20031130</pubdate>
+<title>Snow Removal Zones</title>
+<geoform>vector digital data</geoform>
+<pubinfo>
+<pubplace/>
+<publish>DDOT Spatial Data Systems Division</publish>
+</pubinfo>
+</citeinfo>
+</citation>
+<descript>
+<abstract>This feature class contains locations and attributes of the DC Snow Zone used during the Winter season. A snow zone is a group of residential snow areas (RSA).The snow zones are used for planning and management of Washington by DDOT, DPW and other local government agencies. This specific data set was created for administrative purposes: individual operators and foremen from DDOT  DPW assigned to each RSA or to primary and secondary snow routes within a zone, work as a team to ensure that service standards for clearing all assigned streets are achieved.</abstract>
+<purpose>Snow removal zones used during the Winter season in the District of Columbia.</purpose>
+<supplinf>DDOT Snow and Street Operations Program Manager is responsible for Snow Zone boundaries.</supplinf>
+</descript>
+<timeperd>
+<timeinfo>
+<rngdates>
+<begdate>November 2003</begdate>
+<enddate>March 2004</enddate>
+</rngdates>
+</timeinfo>
+<current>ground condition</current>
+</timeperd>
+<status>
+<progress>Complete</progress>
+<update>As needed</update>
+</status>
+<spdom>
+<bounding>
+<westbc>-77.115619</westbc>
+<eastbc>-76.909401</eastbc>
+<northbc>38.995255</northbc>
+<southbc>38.804357</southbc>
+</bounding>
+</spdom>
+<keywords>
+<theme>
+<themekt>None</themekt>
+<themekey>Snow Zone</themekey>
+</theme>
+<place>
+<placekt>None</placekt>
+<placekey>Washington</placekey>
+<placekey>DC</placekey>
+<placekey>DDOT GIS</placekey>
+</place>
+</keywords>
+<accconst>None</accconst>
+<useconst>This work is licensed under a Creative Commons Attribution 4.0 International License.</useconst>
+<ptcontac>
+<cntinfo>
+<cntorgp>
+<cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+<cntper>GIS Data Coordinator</cntper>
+</cntorgp>
+<cntpos/>
+<cntaddr>
+<addrtype>mailing and physical</addrtype>
+<address>200 I Street SE, 5th Floor</address>
+<city>Washington</city>
+<state>DC</state>
+<postal>20003</postal>
+<country>US</country>
+</cntaddr>
+<cntvoice/>
+<cntfax>(202) 727-5660</cntfax>
+<cntemail>dcgis@dc.gov</cntemail>
+<hours>8:30 am - 5 pm</hours>
+<cntinst/>
+</cntinfo>
+</ptcontac>
+</idinfo>
+<spdoinfo>
+<direct>Vector</direct>
+<ptvctinf>
+<sdtsterm>
+<sdtstype>GT-polygon composed of chains</sdtstype>
+<ptvctcnt>14</ptvctcnt>
+</sdtsterm>
+</ptvctinf>
+</spdoinfo>
+<eainfo>
+<detailed>
+<enttyp>
+<enttypl>DCGIS.SnowZone</enttypl>
+</enttyp>
+<attr>
+<attrlabl>OBJECTID</attrlabl>
+<attrdef>Internal feature number.</attrdef>
+<attrdefs>ESRI</attrdefs>
+<attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+</attr>
+<attr>
+<attrlabl>ZONE_</attrlabl>
+</attr>
+<attr>
+<attrlabl>PERIMETER</attrlabl>
+</attr>
+<attr>
+<attrlabl>SHAPE</attrlabl>
+<attrdef>Feature geometry.</attrdef>
+<attrdefs>ESRI</attrdefs>
+<attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+</attr>
+<attr>
+<attrlabl>SNOWZONE</attrlabl>
+</attr>
+<attr>
+<attrlabl>SE_ANNO_CAD_DATA</attrlabl>
+</attr>
+<attr>
+<attrlabl>GIS_ID</attrlabl>
+</attr>
+<attr>
+<attrlabl>GlobalID</attrlabl>
+</attr>
+<attr>
+<attrlabl>Creator</attrlabl>
+</attr>
+<attr>
+<attrlabl>Created</attrlabl>
+</attr>
+<attr>
+<attrlabl>Editor</attrlabl>
+</attr>
+<attr>
+<attrlabl>Edited</attrlabl>
+</attr>
+<attr>
+<attrlabl>SHAPE.AREA</attrlabl>
+</attr>
+<attr>
+<attrlabl>SHAPE.LEN</attrlabl>
+</attr>
+</detailed>
+</eainfo>
+<distinfo>
+<distrib>
+<cntinfo>
+<cntorgp>
+<cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+<cntper>GIS Data Coordinator</cntper>
+</cntorgp>
+<cntpos/>
+<cntaddr>
+<addrtype>mailing and physical</addrtype>
+<address>200 I Street SE, 5th Floor</address>
+<city>Washington</city>
+<state>DC</state>
+<postal>20003</postal>
+<country>US</country>
+</cntaddr>
+<cntvoice/>
+<cntfax>(202) 727-5660</cntfax>
+<cntemail>dcgis@dc.gov</cntemail>
+<hours>8:30 am - 5 pm</hours>
+<cntinst/>
+</cntinfo>
+</distrib>
+<distliab>See access and use constraints information.</distliab>
+<custom>DC datasets can be downloaded from "http://opendata.dc.gov".</custom>
+</distinfo>
+<metainfo>
+<metd>20171016</metd>
+<metc>
+<cntinfo>
+<cntorgp>
+<cntorg>D.C. Office of the Chief Technology Officer</cntorg>
+<cntper>GIS Data Coordinator</cntper>
+</cntorgp>
+<cntpos/>
+<cntaddr>
+<addrtype>mailing and physical</addrtype>
+<address>200 I Street SE, 5th Floor</address>
+<city>Washington</city>
+<state>DC</state>
+<postal>20003</postal>
+<country>US</country>
+</cntaddr>
+<cntvoice/>
+<cntfax>(202) 727-5660</cntfax>
+<cntemail>dcgis@dc.gov</cntemail>
+<hours>8:30 am - 5 pm</hours>
+<cntinst/>
+</cntinfo>
+</metc>
+<metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+<metstdv>FGDC-STD-001-1998</metstdv>
+<mettc>local time</mettc>
+</metainfo>
+</metadata>

@@ -1,0 +1,97 @@
+\hypertarget{_l_p_route_8py}{}\doxysection{LPRoute.\+py File Reference}
+\label{_l_p_route_8py}\index{LPRoute.py@{LPRoute.py}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_l_p_route}{LPRoute}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespace_l_p_route_a1095c37ce6325d466f2c1e3b41b56c68}{LPRoute.\+dist\+\_\+from}} (loc1, loc2)
+\item 
+def \mbox{\hyperlink{namespace_l_p_route_a162ea5ab46c0666c3cc17d9ec9ae4c6f}{LPRoute.\+get\+\_\+next\+\_\+loc}} (initial)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_l_p_route_a9abfdd46b053c0dc033efdb560f31a06}{LPRoute.\+G}} = nx.\+random\+\_\+geometric\+\_\+graph(10, 0.\+3)
+\begin{DoxyCompactList}\small\item\em To Generate a Synthetic graph with 10 nodes having a density of 0.\+3 storing the random geometric graph in G. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_l_p_route_a77d97d42355f8aa161cf0cc539f489b2}{LPRoute.\+pos}} = nx.\+get\+\_\+node\+\_\+attributes(G, \char`\"{}pos\char`\"{})
+\begin{DoxyCompactList}\small\item\em pos stores node attributes from G. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_l_p_route_a861577849d255fec1b716516b3cbc3bb}{LPRoute.\+dmin}} = 1
+\begin{DoxyCompactList}\small\item\em dmin\+: helps break the loop, min required. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_l_p_route_afa1d51481018b104c14e23c52ba65c21}{LPRoute.\+ncenter}} = 0
+\begin{DoxyCompactList}\small\item\em ncenter\+: stores node updates post calculation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_l_p_route_a22c34c98ad8735f6ef10e68609c92957}{LPRoute.\+x}}
+\begin{DoxyCompactList}\small\item\em x,y \+: are the cordinate positons for a node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_l_p_route_a362574319b9ad91ba4313d764ea8180b}{LPRoute.\+y}}
+\item 
+tuple \mbox{\hyperlink{namespace_l_p_route_a5838abbc644aa842dacdb7163d86ca15}{LPRoute.\+d}} = (x -\/ 0.\+5) $\ast$$\ast$ 2 + (y -\/ 0.\+5) $\ast$$\ast$ 2
+\begin{DoxyCompactList}\small\item\em d\+: stores the distance using the distance formula used between point (0.\+5,0.\+5) and (x,y). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_l_p_route_ac8886502e96eb0ca49be121e1e81f4c9}{LPRoute.\+p}} = dict(nx.\+single\+\_\+source\+\_\+shortest\+\_\+path\+\_\+length(G, ncenter))
+\begin{DoxyCompactList}\small\item\em p\+: is a dictionarty that stores node information taken from random geometric graphs and the updates made to each node after calculation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_l_p_route_a611d568c61bf6df6cce7d8eeb301512f}{LPRoute.\+figsize}}
+\begin{DoxyCompactList}\small\item\em figsize\+: This controls the endproduct of the figure. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_l_p_route_a3954688019702e6c3676ce32158606ef}{LPRoute.\+nodelist}}
+\begin{DoxyCompactList}\small\item\em nodelist\+: list of nodes with their cordinates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_l_p_route_ac8507c00349ce346822afc120ed8e715}{LPRoute.\+alpha}}
+\item 
+\mbox{\hyperlink{namespace_l_p_route_af128f077a1ae717d6f7855ace8564f9c}{LPRoute.\+node\+\_\+size}}
+\begin{DoxyCompactList}\small\item\em node\+\_\+size\+: declares the node size. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_l_p_route_ae5f9141d07ee646ed17f311b8b6b561c}{LPRoute.\+node\+\_\+color}}
+\begin{DoxyCompactList}\small\item\em node\+\_\+color\+: assigns color to depict a node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_l_p_route_a889e0de74aecc6635e535eca0f944c1c}{LPRoute.\+cmap}}
+\begin{DoxyCompactList}\small\item\em cmap\+: responsible for the plot by storing all. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_l_p_route_a50a721d32b856f1fd24fc84efee1fae3}{LPRoute.\+ll}} = list()
+\begin{DoxyCompactList}\small\item\em ll\+: indicates the left or x cordinate. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_l_p_route_a59a0abc3f8a544b0c145cc05ca29af1a}{LPRoute.\+rr}} = list()
+\begin{DoxyCompactList}\small\item\em rr\+: indicates the right or y cordinate. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_l_p_route_a62c6bbeed04e9295dfcda2dadcd754fa}{LPRoute.\+df}} = pd.\+Data\+Frame()
+\begin{DoxyCompactList}\small\item\em df\+: creates a dataframe to store the cordinate information and unique indexes to represent these. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_l_p_route_a78af1ebb6d3ba2fc461c8653ffb6c4e9}{LPRoute.\+distances\+\_\+df}} = df.\+iloc\mbox{[}\+:,4\+:4183\mbox{]}
+\begin{DoxyCompactList}\small\item\em distances\+\_\+df\+: This slices the original dataframe for information from columns 4-\/4183 which includes cordinate infromation and their unique indexes. \end{DoxyCompactList}\item 
+dictionary \mbox{\hyperlink{namespace_l_p_route_a047e6a210a427b87ae83b113cd238a8c}{LPRoute.\+dist\+\_\+dict}} = \{\}
+\begin{DoxyCompactList}\small\item\em distances\+\_\+df.\+index=df.\+ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_l_p_route_a1ed46b10beb1ef4ef36078dc603cc11e}{LPRoute.\+locations}} = dict( ( ID, (df.\+loc\mbox{[}ID, \textquotesingle{}Left\textquotesingle{}\mbox{]}, df.\+loc\mbox{[}ID, \textquotesingle{}Right\textquotesingle{}\mbox{]}) ) for ID in df.\+index)
+\begin{DoxyCompactList}\small\item\em locations\+: This stores the required node information (x/left,y/right cordinates and index) in the form a dictionary. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_l_p_route_a8c10f05d5882d50d6e59aa272107fe33}{LPRoute.\+lo}} = locations\mbox{[}l\mbox{]}
+\begin{DoxyCompactList}\small\item\em lo\+: This stores a single location from the dictionary being dealt with at a time. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_l_p_route_a3eb9f6890fa0cbf253fd5a9f2db3694c}{LPRoute.\+l}}
+\item 
+\mbox{\hyperlink{namespace_l_p_route_ab9da591c4d30bce5abb59a35f27ab858}{LPRoute.\+horizontalalignment}}
+\item 
+\mbox{\hyperlink{namespace_l_p_route_a9c8bb2c282555c1d3b7dd2eaf036533d}{LPRoute.\+verticalalignment}}
+\item 
+\mbox{\hyperlink{namespace_l_p_route_a9bdea888ad5d4e42137fff0a484c7541}{LPRoute.\+df1}} = pd.\+Data\+Frame()
+\begin{DoxyCompactList}\small\item\em df1\+: dataframe used to drop cordinate information and unique indexes to store values and dates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_l_p_route_ace8983a89d88ea3f0408a9b099902c00}{LPRoute.\+distance}} = df1
+\begin{DoxyCompactList}\small\item\em distance\+: Stores values left in dataframe df1. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_l_p_route_a7b00fb72416f333eb939d3353c723503}{LPRoute.\+distances}} = dict( ((l1,l2), distance.\+iloc\mbox{[}l1, l2\mbox{]} ) for l1 in locations for l2 in locations if l1!=l2)
+\begin{DoxyCompactList}\small\item\em distances\+: is a ditionary used to store distances from each node to all the other nodes in the graph. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_l_p_route_a348d63046377d106563583f8dae1a911}{LPRoute.\+V}} = 3
+\begin{DoxyCompactList}\small\item\em V\+: Indicates the number of vehicles to be deployed to visit the paths. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_l_p_route_a53640b4ccde04856aa72d7eadb85247d}{LPRoute.\+prob}} = Lp\+Problem(\char`\"{}vehicle\char`\"{}, Lp\+Minimize)
+\begin{DoxyCompactList}\small\item\em prob\+: Creating the problem initialization using Linear Programming that will use constraints. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_l_p_route_a36f2bf6648038b11feeac34a2958f4b7}{LPRoute.\+indicator}} = Lp\+Variable.\+dicts(\textquotesingle{}indicator\textquotesingle{},distances, 0,1,Lp\+Binary)
+\begin{DoxyCompactList}\small\item\em indicator\+: The indicator variable that defines distances in a dictionary. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_l_p_route_a2eebe939c1d931d89228077d275e1af9}{LPRoute.\+eliminator}} = Lp\+Variable.\+dicts(\textquotesingle{}eliminator\textquotesingle{}, df.\+ID, 0, len(df.\+ID)-\/1, Lp\+Integer)
+\begin{DoxyCompactList}\small\item\em eliminator\+: The eliminator to remove revisting nodes already visited. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_l_p_route_a11b01f588cfc4ce0bd12882293d46cef}{LPRoute.\+cost}} = lp\+Sum(\mbox{[}indicator\mbox{[}(i,j)\mbox{]}$\ast$distances\mbox{[}(i,j)\mbox{]} for (i,j) in distances\mbox{]})
+\begin{DoxyCompactList}\small\item\em cost\+: sets up the objective by storing results of distance calculations of a single node with all the others. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_l_p_route_a9fa0a0ed792569c7d26936c77bd08e14}{LPRoute.\+cap}} = 7 else V
+\begin{DoxyCompactList}\small\item\em Setting up constraints for each to check if the vehicle can visit the node. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_l_p_route_ada62dd81c540a81b68f47793db91c499}{LPRoute.\+num}} = len(df.\+ID)/V
+\begin{DoxyCompactList}\small\item\em To eliminate subtours. \end{DoxyCompactList}\item 
+list \mbox{\hyperlink{namespace_l_p_route_a911523f3ae5717ed07d0d10456c6a427}{LPRoute.\+feasible\+\_\+edges}} = \mbox{[} e for e in indicator if value(indicator\mbox{[}e\mbox{]}) != 0 \mbox{]}
+\begin{DoxyCompactList}\small\item\em feasibleedges\+: This stores values of edges that can be reached in a tour by a vehicle along the path. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespace_l_p_route_acc7d76b5fcb641b5f7bc3873ee4470bb}{LPRoute.\+routes}} = get\+\_\+next\+\_\+loc(7)
+\begin{DoxyCompactList}\small\item\em routes\+: Stores path information. \end{DoxyCompactList}\item 
+list \mbox{\hyperlink{namespace_l_p_route_abc0ad23555757fdf50cefc5a34b16905}{LPRoute.\+coloured\+\_\+loc}} = \mbox{[}np.\+random.\+rand(3) for i in range(len(routes))\mbox{]}
+\begin{DoxyCompactList}\small\item\em coloured\+\_\+loc\+: This stores information for node paths seperated with different colours to indicate seperate paths taken by each path outlining these routes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_l_p_route_a24d2fdbdcdbe2419d07f05f0b6f50635}{LPRoute.\+l1}}
+\item 
+\mbox{\hyperlink{namespace_l_p_route_a9a1a52b50a2bc64e14d3394fe76f1c00}{LPRoute.\+l2}}
+\item 
+\mbox{\hyperlink{namespace_l_p_route_ad356fbd657c9d0b081b01f8dfa399eda}{LPRoute.\+color}}
+\end{DoxyCompactItemize}

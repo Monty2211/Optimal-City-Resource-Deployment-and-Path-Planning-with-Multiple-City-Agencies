@@ -1,0 +1,30 @@
+\hypertarget{routes__geo_json_8py}{}\doxysection{routes\+\_\+geo\+Json.\+py File Reference}
+\label{routes__geo_json_8py}\index{routes\_geoJson.py@{routes\_geoJson.py}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceroutes__geo_json}{routes\+\_\+geo\+Json}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespaceroutes__geo_json_ac1f75851469ec727bada2f3b3a881bfb}{routes\+\_\+geo\+Json.\+m}} = folium.\+Map(location=\mbox{[}43.\+08826653741596, -\/77.\+6734558492899\mbox{]}, zoom\+\_\+start=17)
+\begin{DoxyCompactList}\small\item\em m\+: The map attributes are saved here, such as the location where the map will start out and the zoom level where the map will load at \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceroutes__geo_json_a36539f7a3998f33e91d0ece31effae13}{routes\+\_\+geo\+Json.\+route\+Data}} = os.\+path.\+join(\textquotesingle{}trial\+\_\+\+Loop.\+json\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em route\+Data \+: the coordinates from the json file are appended using the os package \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceroutes__geo_json_a03f0bda1eb28f8c8eec9d22f4099f0f1}{routes\+\_\+geo\+Json.\+name}}
+\item 
+string \mbox{\hyperlink{namespaceroutes__geo_json_aed47b0e6e4e7326155618d004563c252}{routes\+\_\+geo\+Json.\+tooltip}} = \char`\"{}Click here!!\char`\"{}
+\begin{DoxyCompactList}\small\item\em tooltip\+: will display the hint message when the mouse is hovered on it \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{namespaceroutes__geo_json_a79be0bdb89153f769a4ae079dd06ce48}{routes\+\_\+geo\+Json.\+html}} = \textquotesingle{}$<$img src=\char`\"{}data\+:image/png;base64,\{\}\char`\"{}$>$\textquotesingle{}.format
+\begin{DoxyCompactList}\small\item\em html\+: adds the image \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceroutes__geo_json_ab7228ed9f03191269d78c7a3e7a3c25b}{routes\+\_\+geo\+Json.\+picture1}} = base64.\+b64encode(open(\textquotesingle{}./images/el\+\_\+tigre.\+png\textquotesingle{},\textquotesingle{}rb\textquotesingle{}).read()).decode()
+\begin{DoxyCompactList}\small\item\em picture1\+: the picture that is displayed when the node is clicked on \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceroutes__geo_json_acd1704da5b6c5a396d3dd5ef787b252d}{routes\+\_\+geo\+Json.\+iframe1}} = IFrame(html(picture1), width=600+20, height=400+20)
+\begin{DoxyCompactList}\small\item\em iframe1\+: inline frame used to load the html made earlier \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceroutes__geo_json_a40e054f26e151cffa4067ac1bafa80ed}{routes\+\_\+geo\+Json.\+popup1}} = folium.\+Popup(iframe1, max\+\_\+width=650)
+\begin{DoxyCompactList}\small\item\em popup1\+: The i\+Frame will load here \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceroutes__geo_json_a3c2021cd7f201dbebebd29c7d63d516d}{routes\+\_\+geo\+Json.\+icon1}} = folium.\+Icon(color=\char`\"{}orange\char`\"{}, icon=\char`\"{}glyphicon-\/home\char`\"{})
+\begin{DoxyCompactList}\small\item\em icon1\+: the icon that is used for the node \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceroutes__geo_json_ae5ff16e43c5f45e7d8da76397e5d9a78}{routes\+\_\+geo\+Json.\+marker1}} = folium.\+Marker(location=\mbox{[}43.\+08826653741596, -\/77.\+6734558492899\mbox{]}, popup=popup1, tooltip=tooltip, icon=icon1).add\+\_\+to(m)
+\begin{DoxyCompactList}\small\item\em marker1\+: The marker which is depicted on the node. \end{DoxyCompactList}\end{DoxyCompactItemize}

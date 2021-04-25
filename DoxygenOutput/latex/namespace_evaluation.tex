@@ -1,0 +1,513 @@
+\hypertarget{namespace_evaluation}{}\doxysection{Evaluation Namespace Reference}
+\label{namespace_evaluation}\index{Evaluation@{Evaluation}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespace_evaluation_a9d1fb96966bd17f03d4b577a0260e472}{dist\+\_\+from}} (loc1, loc2)
+\begin{DoxyCompactList}\small\item\em @dist\+\_\+from Calculates the distance between the provided node coordinates. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespace_evaluation_ae5d1fa94ebdd07289861895a26cd605b}{get\+\_\+next\+\_\+loc}} (initial)
+\begin{DoxyCompactList}\small\item\em @get\+\_\+next\+\_\+loc This provides with the next coordinates for the next node in the path. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespace_evaluation_a8b9d4471305180176004dcc6e11e996d}{create\+\_\+data\+\_\+model}} ()
+\begin{DoxyCompactList}\small\item\em @ package create\+\_\+data\+\_\+model Stores the data for the problem. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespace_evaluation_a869afb036c2e2a5e25091b04e2a93345}{print\+\_\+solution}} (data, manager, routing, solution)
+\begin{DoxyCompactList}\small\item\em @print\+\_\+solution Prints solution on console. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespace_evaluation_a61d419a668703ce3a9ce0705a89d8f63}{main}} ()
+\begin{DoxyCompactList}\small\item\em @main Solve the CVRP problem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_evaluation_ae0d2735beeef1d6b1344a24514eaa1e6}{G}} = nx.\+random\+\_\+geometric\+\_\+graph(15, 0.\+3)
+\begin{DoxyCompactList}\small\item\em G\+: This is where the definition of the graph is stored. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_adb8bde94b5037c9810055bfb6aea9f2e}{pos}} = nx.\+get\+\_\+node\+\_\+attributes(\mbox{\hyperlink{namespace_evaluation_ae0d2735beeef1d6b1344a24514eaa1e6}{G}}, \char`\"{}pos\char`\"{})
+\begin{DoxyCompactList}\small\item\em pos\+: Details and attributes of G are stored here. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_evaluation_a91f1aeb93f765cc3633615b050db0b30}{dmin}} = 1
+\begin{DoxyCompactList}\small\item\em dmin\+: Least amount needed to break the loop. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_evaluation_a608d909793bd3b0ab338b01c8801708d}{ncenter}} = 0
+\begin{DoxyCompactList}\small\item\em ncenter\+: Updating the node center after each calculation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a70f9cd7c636cc0004db3585899e8cb1b}{x}}
+\begin{DoxyCompactList}\small\item\em x,y\+: They signify the coordinates of a particular node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a9890166cf9fe5342882dc76926b876ca}{y}}
+\item 
+tuple \mbox{\hyperlink{namespace_evaluation_a432a0694974e9ac36c6f223acac9facb}{d}} = (\mbox{\hyperlink{namespace_evaluation_a70f9cd7c636cc0004db3585899e8cb1b}{x}} -\/ 0.\+5) $\ast$$\ast$ 2 + (\mbox{\hyperlink{namespace_evaluation_a9890166cf9fe5342882dc76926b876ca}{y}} -\/ 0.\+5) $\ast$$\ast$ 2
+\begin{DoxyCompactList}\small\item\em d\+: This stores the calculation of the equation which uses coordinates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_aa89412fca919cfe1d8463d95247e28fc}{p}} = dict(nx.\+single\+\_\+source\+\_\+shortest\+\_\+path\+\_\+length(\mbox{\hyperlink{namespace_evaluation_ae0d2735beeef1d6b1344a24514eaa1e6}{G}}, \mbox{\hyperlink{namespace_evaluation_a608d909793bd3b0ab338b01c8801708d}{ncenter}}))
+\begin{DoxyCompactList}\small\item\em p\+: This is a dictionary which stores node information. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a853f1d0dce0df059211ef2431f28d799}{figsize}}
+\begin{DoxyCompactList}\small\item\em figsize\+: This controls the endproduct of the figure. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a1e206ff095f94e4b2e7c3d74ff01c754}{nodelist}}
+\item 
+\mbox{\hyperlink{namespace_evaluation_abc5cf0a632065a0702ae9fb445164185}{alpha}}
+\item 
+\mbox{\hyperlink{namespace_evaluation_a164776849eb0cc93fd516c3dbd62aded}{node\+\_\+size}}
+\begin{DoxyCompactList}\small\item\em nodesize\+: This defines the size of the node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a970e692882e3112c8f230dfa7218c953}{node\+\_\+color}}
+\begin{DoxyCompactList}\small\item\em nodecolour\+: This defines the colour of the node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_aff3603c2259a5c5efb27964f10f00d76}{cmap}}
+\begin{DoxyCompactList}\small\item\em cmap\+: This stores the final figure plot information \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_afa4c60dd525e6fbb825312940dbef610}{ll}} = list()
+\begin{DoxyCompactList}\small\item\em ll\+: This signifies the x-\/coordinate of the particular node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a31921850ec05527e190a920ded214d71}{rr}} = list()
+\begin{DoxyCompactList}\small\item\em rr\+: This signifies the y-\/coordinate of the particular node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a8672bc4c5b9f52eeb204a30b0f6a3540}{df}} = pd.\+Data\+Frame()
+\begin{DoxyCompactList}\small\item\em df\+: This declares an empty dataframe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a885b4f6289756efff78075470460349a}{distances\+\_\+df}} = df.\+iloc\mbox{[}\+:,4\+:4183\mbox{]}
+\begin{DoxyCompactList}\small\item\em distances\+\_\+df\+: This stores the dataframe information of the sliced columns. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a280825293be27e67f595cab46b6dab45}{locations}} = dict( ( ID, (df.\+loc\mbox{[}ID, \textquotesingle{}Left\textquotesingle{}\mbox{]}, df.\+loc\mbox{[}ID, \textquotesingle{}Right\textquotesingle{}\mbox{]}) ) for ID in df.\+index)
+\begin{DoxyCompactList}\small\item\em locations\+: This stores the nodes along with their coordinates in the form of a dictionary. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a9575e390bd04345f54194a4f8c785df0}{lo}} = \mbox{\hyperlink{namespace_evaluation_a280825293be27e67f595cab46b6dab45}{locations}}\mbox{[}\mbox{\hyperlink{namespace_evaluation_ad79cbabce3967c4d6ae316dfc1d9c452}{l}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em l\+: It iterates over every instance of the locations dictionary \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_ad79cbabce3967c4d6ae316dfc1d9c452}{l}}
+\item 
+\mbox{\hyperlink{namespace_evaluation_a4891bac01cc75e10639ba2c9bc8b8385}{horizontalalignment}}
+\item 
+\mbox{\hyperlink{namespace_evaluation_afcdf91b4ee8a20031b1bddb69fad4748}{verticalalignment}}
+\item 
+\mbox{\hyperlink{namespace_evaluation_a1563c94ff5f94917b7a5f936f2f099f7}{df1}} = pd.\+Data\+Frame()
+\begin{DoxyCompactList}\small\item\em df1\+: This declares an empty dataframe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a9b3ad1b73757396cb3062832163d09de}{distance}} = \mbox{\hyperlink{namespace_evaluation_a1563c94ff5f94917b7a5f936f2f099f7}{df1}}
+\begin{DoxyCompactList}\small\item\em distance\+: This stores values and date from df1. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a72c37976232b2693dd2d66e58f115cbe}{distances}} = dict( ((\mbox{\hyperlink{namespace_evaluation_a1ac107dfeea63a174e1d85be80558386}{l1}},\mbox{\hyperlink{namespace_evaluation_adc2d04eaa51292b5308fc646af447e75}{l2}}), distance.\+iloc\mbox{[}\mbox{\hyperlink{namespace_evaluation_a1ac107dfeea63a174e1d85be80558386}{l1}}, \mbox{\hyperlink{namespace_evaluation_adc2d04eaa51292b5308fc646af447e75}{l2}}\mbox{]} ) for \mbox{\hyperlink{namespace_evaluation_a1ac107dfeea63a174e1d85be80558386}{l1}} in \mbox{\hyperlink{namespace_evaluation_a280825293be27e67f595cab46b6dab45}{locations}} for \mbox{\hyperlink{namespace_evaluation_adc2d04eaa51292b5308fc646af447e75}{l2}} in \mbox{\hyperlink{namespace_evaluation_a280825293be27e67f595cab46b6dab45}{locations}} if l1!=\mbox{\hyperlink{namespace_evaluation_adc2d04eaa51292b5308fc646af447e75}{l2}})
+\begin{DoxyCompactList}\small\item\em distances\+: This is a dictionary that stores distances from each node with all other nodes. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_evaluation_a01c81e46aa0488ff6f175ca57f0b66e4}{V}} = 5
+\begin{DoxyCompactList}\small\item\em V\+: This defines the total number of vehicles that will traverse the path. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a462e306f48f153f2df20c64f50481a19}{prob}} = Lp\+Problem(\char`\"{}vehicle\char`\"{}, Lp\+Minimize)
+\begin{DoxyCompactList}\small\item\em prob\+: This initializes the problem that will run using provided constraints. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a405008817741bb522ab78c6ef1409efe}{indicator}} = Lp\+Variable.\+dicts(\textquotesingle{}indicator\textquotesingle{},\mbox{\hyperlink{namespace_evaluation_a72c37976232b2693dd2d66e58f115cbe}{distances}}, 0,1,Lp\+Binary)
+\begin{DoxyCompactList}\small\item\em indicator\+: This defines the variable dictionary consisting of distances and indicates if location i is connected to location j along route \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a261b8424619e745c6f8a83e9eeb6cf73}{eliminator}} = Lp\+Variable.\+dicts(\textquotesingle{}eliminator\textquotesingle{}, df.\+ID, 0, len(df.\+ID)-\/1, Lp\+Integer)
+\begin{DoxyCompactList}\small\item\em eliminator\+: This defines the variable dictionary consisting of the node ID\textquotesingle{}s and elimiate subtours \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a9e81b980d71f45a3f0e8724473f17f22}{cost}} = lp\+Sum(\mbox{[}\mbox{\hyperlink{namespace_evaluation_a405008817741bb522ab78c6ef1409efe}{indicator}}\mbox{[}(i,j)\mbox{]}$\ast$\mbox{\hyperlink{namespace_evaluation_a72c37976232b2693dd2d66e58f115cbe}{distances}}\mbox{[}(i,j)\mbox{]} for (i,j) in \mbox{\hyperlink{namespace_evaluation_a72c37976232b2693dd2d66e58f115cbe}{distances}}\mbox{]})
+\begin{DoxyCompactList}\small\item\em cost\+: This stores the result of distances calculations. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_evaluation_a069a3aabf0571d51c5c6fcc8a1836589}{cap}} = 7 else \mbox{\hyperlink{namespace_evaluation_a01c81e46aa0488ff6f175ca57f0b66e4}{V}}
+\begin{DoxyCompactList}\small\item\em cap\+: This considers a particular node at a time. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_evaluation_a13ecd37916f23fbf678fd4a6a1d6a4cc}{num}} = len(df.\+ID)/\mbox{\hyperlink{namespace_evaluation_a01c81e46aa0488ff6f175ca57f0b66e4}{V}}
+\begin{DoxyCompactList}\small\item\em num\+: This stores the result of the number of nodes and the number of vehicles. \end{DoxyCompactList}\item 
+list \mbox{\hyperlink{namespace_evaluation_a4ec0c3505dea59bb08cde5d469e6a6d9}{feasible\+\_\+edges}} = \mbox{[} e for e in \mbox{\hyperlink{namespace_evaluation_a405008817741bb522ab78c6ef1409efe}{indicator}} if value(\mbox{\hyperlink{namespace_evaluation_a405008817741bb522ab78c6ef1409efe}{indicator}}\mbox{[}e\mbox{]}) != 0 \mbox{]}
+\begin{DoxyCompactList}\small\item\em feasibleedges\+: This stores values of edges after the calculations are done. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespace_evaluation_aed4d1d61ccf65b1c295900b73e523a63}{routes}} = \mbox{\hyperlink{namespace_evaluation_ae5d1fa94ebdd07289861895a26cd605b}{get\+\_\+next\+\_\+loc}}(7)
+\begin{DoxyCompactList}\small\item\em routes\+: This stores information regarding paths. \end{DoxyCompactList}\item 
+list \mbox{\hyperlink{namespace_evaluation_aad7dcce2362e186be9cbf19d69e64e4b}{coloured\+\_\+loc}} = \mbox{[}np.\+random.\+rand(3) for i in range(len(\mbox{\hyperlink{namespace_evaluation_aed4d1d61ccf65b1c295900b73e523a63}{routes}}))\mbox{]}
+\begin{DoxyCompactList}\small\item\em coloured\+\_\+loc\+: This stores information according to individual paths. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a1ac107dfeea63a174e1d85be80558386}{l1}}
+\item 
+\mbox{\hyperlink{namespace_evaluation_adc2d04eaa51292b5308fc646af447e75}{l2}}
+\item 
+\mbox{\hyperlink{namespace_evaluation_a2a6e6eb7cde3b47e7a1f79048f4991a4}{color}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespace_evaluation_a8b9d4471305180176004dcc6e11e996d}\label{namespace_evaluation_a8b9d4471305180176004dcc6e11e996d}} 
+\index{Evaluation@{Evaluation}!create\_data\_model@{create\_data\_model}}
+\index{create\_data\_model@{create\_data\_model}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{create\_data\_model()}{create\_data\_model()}}
+{\footnotesize\ttfamily def Evaluation.\+create\+\_\+data\+\_\+model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+@ package create\+\_\+data\+\_\+model Stores the data for the problem. 
+
+\mbox{\Hypertarget{namespace_evaluation_a9d1fb96966bd17f03d4b577a0260e472}\label{namespace_evaluation_a9d1fb96966bd17f03d4b577a0260e472}} 
+\index{Evaluation@{Evaluation}!dist\_from@{dist\_from}}
+\index{dist\_from@{dist\_from}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{dist\_from()}{dist\_from()}}
+{\footnotesize\ttfamily def Evaluation.\+dist\+\_\+from (\begin{DoxyParamCaption}\item[{}]{loc1,  }\item[{}]{loc2 }\end{DoxyParamCaption})}
+
+
+
+@dist\+\_\+from Calculates the distance between the provided node coordinates. 
+
+loc1\+: This stores coordinates of the first node. loc2\+: This stores coordinates of the second node. \mbox{\Hypertarget{namespace_evaluation_ae5d1fa94ebdd07289861895a26cd605b}\label{namespace_evaluation_ae5d1fa94ebdd07289861895a26cd605b}} 
+\index{Evaluation@{Evaluation}!get\_next\_loc@{get\_next\_loc}}
+\index{get\_next\_loc@{get\_next\_loc}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{get\_next\_loc()}{get\_next\_loc()}}
+{\footnotesize\ttfamily def Evaluation.\+get\+\_\+next\+\_\+loc (\begin{DoxyParamCaption}\item[{}]{initial }\end{DoxyParamCaption})}
+
+
+
+@get\+\_\+next\+\_\+loc This provides with the next coordinates for the next node in the path. 
+
+\mbox{\Hypertarget{namespace_evaluation_a61d419a668703ce3a9ce0705a89d8f63}\label{namespace_evaluation_a61d419a668703ce3a9ce0705a89d8f63}} 
+\index{Evaluation@{Evaluation}!main@{main}}
+\index{main@{main}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily def Evaluation.\+main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+@main Solve the CVRP problem. 
+
+\mbox{\Hypertarget{namespace_evaluation_a869afb036c2e2a5e25091b04e2a93345}\label{namespace_evaluation_a869afb036c2e2a5e25091b04e2a93345}} 
+\index{Evaluation@{Evaluation}!print\_solution@{print\_solution}}
+\index{print\_solution@{print\_solution}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{print\_solution()}{print\_solution()}}
+{\footnotesize\ttfamily def Evaluation.\+print\+\_\+solution (\begin{DoxyParamCaption}\item[{}]{data,  }\item[{}]{manager,  }\item[{}]{routing,  }\item[{}]{solution }\end{DoxyParamCaption})}
+
+
+
+@print\+\_\+solution Prints solution on console. 
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespace_evaluation_abc5cf0a632065a0702ae9fb445164185}\label{namespace_evaluation_abc5cf0a632065a0702ae9fb445164185}} 
+\index{Evaluation@{Evaluation}!alpha@{alpha}}
+\index{alpha@{alpha}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{alpha}{alpha}}
+{\footnotesize\ttfamily Evaluation.\+alpha}
+
+\mbox{\Hypertarget{namespace_evaluation_a069a3aabf0571d51c5c6fcc8a1836589}\label{namespace_evaluation_a069a3aabf0571d51c5c6fcc8a1836589}} 
+\index{Evaluation@{Evaluation}!cap@{cap}}
+\index{cap@{cap}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{cap}{cap}}
+{\footnotesize\ttfamily int Evaluation.\+cap = 7 else \mbox{\hyperlink{namespace_evaluation_a01c81e46aa0488ff6f175ca57f0b66e4}{V}}}
+
+
+
+cap\+: This considers a particular node at a time. 
+
+\mbox{\Hypertarget{namespace_evaluation_aff3603c2259a5c5efb27964f10f00d76}\label{namespace_evaluation_aff3603c2259a5c5efb27964f10f00d76}} 
+\index{Evaluation@{Evaluation}!cmap@{cmap}}
+\index{cmap@{cmap}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{cmap}{cmap}}
+{\footnotesize\ttfamily Evaluation.\+cmap}
+
+
+
+cmap\+: This stores the final figure plot information 
+
+\mbox{\Hypertarget{namespace_evaluation_a2a6e6eb7cde3b47e7a1f79048f4991a4}\label{namespace_evaluation_a2a6e6eb7cde3b47e7a1f79048f4991a4}} 
+\index{Evaluation@{Evaluation}!color@{color}}
+\index{color@{color}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily Evaluation.\+color}
+
+\mbox{\Hypertarget{namespace_evaluation_aad7dcce2362e186be9cbf19d69e64e4b}\label{namespace_evaluation_aad7dcce2362e186be9cbf19d69e64e4b}} 
+\index{Evaluation@{Evaluation}!coloured\_loc@{coloured\_loc}}
+\index{coloured\_loc@{coloured\_loc}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{coloured\_loc}{coloured\_loc}}
+{\footnotesize\ttfamily list Evaluation.\+coloured\+\_\+loc = \mbox{[}np.\+random.\+rand(3) for i in range(len(\mbox{\hyperlink{namespace_evaluation_aed4d1d61ccf65b1c295900b73e523a63}{routes}}))\mbox{]}}
+
+
+
+coloured\+\_\+loc\+: This stores information according to individual paths. 
+
+~\newline
+ \mbox{\Hypertarget{namespace_evaluation_a9e81b980d71f45a3f0e8724473f17f22}\label{namespace_evaluation_a9e81b980d71f45a3f0e8724473f17f22}} 
+\index{Evaluation@{Evaluation}!cost@{cost}}
+\index{cost@{cost}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{cost}{cost}}
+{\footnotesize\ttfamily Evaluation.\+cost = lp\+Sum(\mbox{[}\mbox{\hyperlink{namespace_evaluation_a405008817741bb522ab78c6ef1409efe}{indicator}}\mbox{[}(i,j)\mbox{]}$\ast$\mbox{\hyperlink{namespace_evaluation_a72c37976232b2693dd2d66e58f115cbe}{distances}}\mbox{[}(i,j)\mbox{]} for (i,j) in \mbox{\hyperlink{namespace_evaluation_a72c37976232b2693dd2d66e58f115cbe}{distances}}\mbox{]})}
+
+
+
+cost\+: This stores the result of distances calculations. 
+
+\mbox{\Hypertarget{namespace_evaluation_a432a0694974e9ac36c6f223acac9facb}\label{namespace_evaluation_a432a0694974e9ac36c6f223acac9facb}} 
+\index{Evaluation@{Evaluation}!d@{d}}
+\index{d@{d}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{d}{d}}
+{\footnotesize\ttfamily tuple Evaluation.\+d = (\mbox{\hyperlink{namespace_evaluation_a70f9cd7c636cc0004db3585899e8cb1b}{x}} -\/ 0.\+5) $\ast$$\ast$ 2 + (\mbox{\hyperlink{namespace_evaluation_a9890166cf9fe5342882dc76926b876ca}{y}} -\/ 0.\+5) $\ast$$\ast$ 2}
+
+
+
+d\+: This stores the calculation of the equation which uses coordinates. 
+
+\mbox{\Hypertarget{namespace_evaluation_a8672bc4c5b9f52eeb204a30b0f6a3540}\label{namespace_evaluation_a8672bc4c5b9f52eeb204a30b0f6a3540}} 
+\index{Evaluation@{Evaluation}!df@{df}}
+\index{df@{df}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{df}{df}}
+{\footnotesize\ttfamily Evaluation.\+df = pd.\+Data\+Frame()}
+
+
+
+df\+: This declares an empty dataframe. 
+
+~\newline
+ \mbox{\Hypertarget{namespace_evaluation_a1563c94ff5f94917b7a5f936f2f099f7}\label{namespace_evaluation_a1563c94ff5f94917b7a5f936f2f099f7}} 
+\index{Evaluation@{Evaluation}!df1@{df1}}
+\index{df1@{df1}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{df1}{df1}}
+{\footnotesize\ttfamily Evaluation.\+df1 = pd.\+Data\+Frame()}
+
+
+
+df1\+: This declares an empty dataframe. 
+
+\mbox{\Hypertarget{namespace_evaluation_a9b3ad1b73757396cb3062832163d09de}\label{namespace_evaluation_a9b3ad1b73757396cb3062832163d09de}} 
+\index{Evaluation@{Evaluation}!distance@{distance}}
+\index{distance@{distance}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{distance}{distance}}
+{\footnotesize\ttfamily Evaluation.\+distance = \mbox{\hyperlink{namespace_evaluation_a1563c94ff5f94917b7a5f936f2f099f7}{df1}}}
+
+
+
+distance\+: This stores values and date from df1. 
+
+\mbox{\Hypertarget{namespace_evaluation_a72c37976232b2693dd2d66e58f115cbe}\label{namespace_evaluation_a72c37976232b2693dd2d66e58f115cbe}} 
+\index{Evaluation@{Evaluation}!distances@{distances}}
+\index{distances@{distances}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{distances}{distances}}
+{\footnotesize\ttfamily Evaluation.\+distances = dict( ((\mbox{\hyperlink{namespace_evaluation_a1ac107dfeea63a174e1d85be80558386}{l1}},\mbox{\hyperlink{namespace_evaluation_adc2d04eaa51292b5308fc646af447e75}{l2}}), distance.\+iloc\mbox{[}\mbox{\hyperlink{namespace_evaluation_a1ac107dfeea63a174e1d85be80558386}{l1}}, \mbox{\hyperlink{namespace_evaluation_adc2d04eaa51292b5308fc646af447e75}{l2}}\mbox{]} ) for \mbox{\hyperlink{namespace_evaluation_a1ac107dfeea63a174e1d85be80558386}{l1}} in \mbox{\hyperlink{namespace_evaluation_a280825293be27e67f595cab46b6dab45}{locations}} for \mbox{\hyperlink{namespace_evaluation_adc2d04eaa51292b5308fc646af447e75}{l2}} in \mbox{\hyperlink{namespace_evaluation_a280825293be27e67f595cab46b6dab45}{locations}} if l1!=\mbox{\hyperlink{namespace_evaluation_adc2d04eaa51292b5308fc646af447e75}{l2}})}
+
+
+
+distances\+: This is a dictionary that stores distances from each node with all other nodes. 
+
+\mbox{\Hypertarget{namespace_evaluation_a885b4f6289756efff78075470460349a}\label{namespace_evaluation_a885b4f6289756efff78075470460349a}} 
+\index{Evaluation@{Evaluation}!distances\_df@{distances\_df}}
+\index{distances\_df@{distances\_df}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{distances\_df}{distances\_df}}
+{\footnotesize\ttfamily Evaluation.\+distances\+\_\+df = df.\+iloc\mbox{[}\+:,4\+:4183\mbox{]}}
+
+
+
+distances\+\_\+df\+: This stores the dataframe information of the sliced columns. 
+
+~\newline
+ \mbox{\Hypertarget{namespace_evaluation_a91f1aeb93f765cc3633615b050db0b30}\label{namespace_evaluation_a91f1aeb93f765cc3633615b050db0b30}} 
+\index{Evaluation@{Evaluation}!dmin@{dmin}}
+\index{dmin@{dmin}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{dmin}{dmin}}
+{\footnotesize\ttfamily tuple Evaluation.\+dmin = 1}
+
+
+
+dmin\+: Least amount needed to break the loop. 
+
+\mbox{\Hypertarget{namespace_evaluation_a261b8424619e745c6f8a83e9eeb6cf73}\label{namespace_evaluation_a261b8424619e745c6f8a83e9eeb6cf73}} 
+\index{Evaluation@{Evaluation}!eliminator@{eliminator}}
+\index{eliminator@{eliminator}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{eliminator}{eliminator}}
+{\footnotesize\ttfamily Evaluation.\+eliminator = Lp\+Variable.\+dicts(\textquotesingle{}eliminator\textquotesingle{}, df.\+ID, 0, len(df.\+ID)-\/1, Lp\+Integer)}
+
+
+
+eliminator\+: This defines the variable dictionary consisting of the node ID\textquotesingle{}s and elimiate subtours 
+
+\mbox{\Hypertarget{namespace_evaluation_a4ec0c3505dea59bb08cde5d469e6a6d9}\label{namespace_evaluation_a4ec0c3505dea59bb08cde5d469e6a6d9}} 
+\index{Evaluation@{Evaluation}!feasible\_edges@{feasible\_edges}}
+\index{feasible\_edges@{feasible\_edges}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{feasible\_edges}{feasible\_edges}}
+{\footnotesize\ttfamily list Evaluation.\+feasible\+\_\+edges = \mbox{[} e for e in \mbox{\hyperlink{namespace_evaluation_a405008817741bb522ab78c6ef1409efe}{indicator}} if value(\mbox{\hyperlink{namespace_evaluation_a405008817741bb522ab78c6ef1409efe}{indicator}}\mbox{[}e\mbox{]}) != 0 \mbox{]}}
+
+
+
+feasibleedges\+: This stores values of edges after the calculations are done. 
+
+\mbox{\Hypertarget{namespace_evaluation_a853f1d0dce0df059211ef2431f28d799}\label{namespace_evaluation_a853f1d0dce0df059211ef2431f28d799}} 
+\index{Evaluation@{Evaluation}!figsize@{figsize}}
+\index{figsize@{figsize}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{figsize}{figsize}}
+{\footnotesize\ttfamily Evaluation.\+figsize}
+
+
+
+figsize\+: This controls the endproduct of the figure. 
+
+\mbox{\Hypertarget{namespace_evaluation_ae0d2735beeef1d6b1344a24514eaa1e6}\label{namespace_evaluation_ae0d2735beeef1d6b1344a24514eaa1e6}} 
+\index{Evaluation@{Evaluation}!G@{G}}
+\index{G@{G}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{G}{G}}
+{\footnotesize\ttfamily Evaluation.\+G = nx.\+random\+\_\+geometric\+\_\+graph(15, 0.\+3)}
+
+
+
+G\+: This is where the definition of the graph is stored. 
+
+nodelist, aplha\+: This stores the list of nodes along with their coordinates. \mbox{\Hypertarget{namespace_evaluation_a4891bac01cc75e10639ba2c9bc8b8385}\label{namespace_evaluation_a4891bac01cc75e10639ba2c9bc8b8385}} 
+\index{Evaluation@{Evaluation}!horizontalalignment@{horizontalalignment}}
+\index{horizontalalignment@{horizontalalignment}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{horizontalalignment}{horizontalalignment}}
+{\footnotesize\ttfamily Evaluation.\+horizontalalignment}
+
+\mbox{\Hypertarget{namespace_evaluation_a405008817741bb522ab78c6ef1409efe}\label{namespace_evaluation_a405008817741bb522ab78c6ef1409efe}} 
+\index{Evaluation@{Evaluation}!indicator@{indicator}}
+\index{indicator@{indicator}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{indicator}{indicator}}
+{\footnotesize\ttfamily Evaluation.\+indicator = Lp\+Variable.\+dicts(\textquotesingle{}indicator\textquotesingle{},\mbox{\hyperlink{namespace_evaluation_a72c37976232b2693dd2d66e58f115cbe}{distances}}, 0,1,Lp\+Binary)}
+
+
+
+indicator\+: This defines the variable dictionary consisting of distances and indicates if location i is connected to location j along route 
+
+\mbox{\Hypertarget{namespace_evaluation_ad79cbabce3967c4d6ae316dfc1d9c452}\label{namespace_evaluation_ad79cbabce3967c4d6ae316dfc1d9c452}} 
+\index{Evaluation@{Evaluation}!l@{l}}
+\index{l@{l}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{l}{l}}
+{\footnotesize\ttfamily Evaluation.\+l}
+
+\mbox{\Hypertarget{namespace_evaluation_a1ac107dfeea63a174e1d85be80558386}\label{namespace_evaluation_a1ac107dfeea63a174e1d85be80558386}} 
+\index{Evaluation@{Evaluation}!l1@{l1}}
+\index{l1@{l1}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{l1}{l1}}
+{\footnotesize\ttfamily Evaluation.\+l1}
+
+\mbox{\Hypertarget{namespace_evaluation_adc2d04eaa51292b5308fc646af447e75}\label{namespace_evaluation_adc2d04eaa51292b5308fc646af447e75}} 
+\index{Evaluation@{Evaluation}!l2@{l2}}
+\index{l2@{l2}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{l2}{l2}}
+{\footnotesize\ttfamily Evaluation.\+l2}
+
+\mbox{\Hypertarget{namespace_evaluation_afa4c60dd525e6fbb825312940dbef610}\label{namespace_evaluation_afa4c60dd525e6fbb825312940dbef610}} 
+\index{Evaluation@{Evaluation}!ll@{ll}}
+\index{ll@{ll}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{ll}{ll}}
+{\footnotesize\ttfamily Evaluation.\+ll = list()}
+
+
+
+ll\+: This signifies the x-\/coordinate of the particular node. 
+
+\mbox{\Hypertarget{namespace_evaluation_a9575e390bd04345f54194a4f8c785df0}\label{namespace_evaluation_a9575e390bd04345f54194a4f8c785df0}} 
+\index{Evaluation@{Evaluation}!lo@{lo}}
+\index{lo@{lo}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{lo}{lo}}
+{\footnotesize\ttfamily Evaluation.\+lo = \mbox{\hyperlink{namespace_evaluation_a280825293be27e67f595cab46b6dab45}{locations}}\mbox{[}\mbox{\hyperlink{namespace_evaluation_ad79cbabce3967c4d6ae316dfc1d9c452}{l}}\mbox{]}}
+
+
+
+l\+: It iterates over every instance of the locations dictionary 
+
+\mbox{\Hypertarget{namespace_evaluation_a280825293be27e67f595cab46b6dab45}\label{namespace_evaluation_a280825293be27e67f595cab46b6dab45}} 
+\index{Evaluation@{Evaluation}!locations@{locations}}
+\index{locations@{locations}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{locations}{locations}}
+{\footnotesize\ttfamily Evaluation.\+locations = dict( ( ID, (df.\+loc\mbox{[}ID, \textquotesingle{}Left\textquotesingle{}\mbox{]}, df.\+loc\mbox{[}ID, \textquotesingle{}Right\textquotesingle{}\mbox{]}) ) for ID in df.\+index)}
+
+
+
+locations\+: This stores the nodes along with their coordinates in the form of a dictionary. 
+
+\mbox{\Hypertarget{namespace_evaluation_a608d909793bd3b0ab338b01c8801708d}\label{namespace_evaluation_a608d909793bd3b0ab338b01c8801708d}} 
+\index{Evaluation@{Evaluation}!ncenter@{ncenter}}
+\index{ncenter@{ncenter}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{ncenter}{ncenter}}
+{\footnotesize\ttfamily Evaluation.\+ncenter = 0}
+
+
+
+ncenter\+: Updating the node center after each calculation. 
+
+\mbox{\Hypertarget{namespace_evaluation_a970e692882e3112c8f230dfa7218c953}\label{namespace_evaluation_a970e692882e3112c8f230dfa7218c953}} 
+\index{Evaluation@{Evaluation}!node\_color@{node\_color}}
+\index{node\_color@{node\_color}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{node\_color}{node\_color}}
+{\footnotesize\ttfamily Evaluation.\+node\+\_\+color}
+
+
+
+nodecolour\+: This defines the colour of the node. 
+
+\mbox{\Hypertarget{namespace_evaluation_a164776849eb0cc93fd516c3dbd62aded}\label{namespace_evaluation_a164776849eb0cc93fd516c3dbd62aded}} 
+\index{Evaluation@{Evaluation}!node\_size@{node\_size}}
+\index{node\_size@{node\_size}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{node\_size}{node\_size}}
+{\footnotesize\ttfamily Evaluation.\+node\+\_\+size}
+
+
+
+nodesize\+: This defines the size of the node. 
+
+\mbox{\Hypertarget{namespace_evaluation_a1e206ff095f94e4b2e7c3d74ff01c754}\label{namespace_evaluation_a1e206ff095f94e4b2e7c3d74ff01c754}} 
+\index{Evaluation@{Evaluation}!nodelist@{nodelist}}
+\index{nodelist@{nodelist}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{nodelist}{nodelist}}
+{\footnotesize\ttfamily Evaluation.\+nodelist}
+
+\mbox{\Hypertarget{namespace_evaluation_a13ecd37916f23fbf678fd4a6a1d6a4cc}\label{namespace_evaluation_a13ecd37916f23fbf678fd4a6a1d6a4cc}} 
+\index{Evaluation@{Evaluation}!num@{num}}
+\index{num@{num}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{num}{num}}
+{\footnotesize\ttfamily int Evaluation.\+num = len(df.\+ID)/\mbox{\hyperlink{namespace_evaluation_a01c81e46aa0488ff6f175ca57f0b66e4}{V}}}
+
+
+
+num\+: This stores the result of the number of nodes and the number of vehicles. 
+
+~\newline
+ \mbox{\Hypertarget{namespace_evaluation_aa89412fca919cfe1d8463d95247e28fc}\label{namespace_evaluation_aa89412fca919cfe1d8463d95247e28fc}} 
+\index{Evaluation@{Evaluation}!p@{p}}
+\index{p@{p}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{p}{p}}
+{\footnotesize\ttfamily Evaluation.\+p = dict(nx.\+single\+\_\+source\+\_\+shortest\+\_\+path\+\_\+length(\mbox{\hyperlink{namespace_evaluation_ae0d2735beeef1d6b1344a24514eaa1e6}{G}}, \mbox{\hyperlink{namespace_evaluation_a608d909793bd3b0ab338b01c8801708d}{ncenter}}))}
+
+
+
+p\+: This is a dictionary which stores node information. 
+
+~\newline
+ \mbox{\Hypertarget{namespace_evaluation_adb8bde94b5037c9810055bfb6aea9f2e}\label{namespace_evaluation_adb8bde94b5037c9810055bfb6aea9f2e}} 
+\index{Evaluation@{Evaluation}!pos@{pos}}
+\index{pos@{pos}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{pos}{pos}}
+{\footnotesize\ttfamily Evaluation.\+pos = nx.\+get\+\_\+node\+\_\+attributes(\mbox{\hyperlink{namespace_evaluation_ae0d2735beeef1d6b1344a24514eaa1e6}{G}}, \char`\"{}pos\char`\"{})}
+
+
+
+pos\+: Details and attributes of G are stored here. 
+
+\mbox{\Hypertarget{namespace_evaluation_a462e306f48f153f2df20c64f50481a19}\label{namespace_evaluation_a462e306f48f153f2df20c64f50481a19}} 
+\index{Evaluation@{Evaluation}!prob@{prob}}
+\index{prob@{prob}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{prob}{prob}}
+{\footnotesize\ttfamily Evaluation.\+prob = Lp\+Problem(\char`\"{}vehicle\char`\"{}, Lp\+Minimize)}
+
+
+
+prob\+: This initializes the problem that will run using provided constraints. 
+
+\mbox{\Hypertarget{namespace_evaluation_aed4d1d61ccf65b1c295900b73e523a63}\label{namespace_evaluation_aed4d1d61ccf65b1c295900b73e523a63}} 
+\index{Evaluation@{Evaluation}!routes@{routes}}
+\index{routes@{routes}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{routes}{routes}}
+{\footnotesize\ttfamily list Evaluation.\+routes = \mbox{\hyperlink{namespace_evaluation_ae5d1fa94ebdd07289861895a26cd605b}{get\+\_\+next\+\_\+loc}}(7)}
+
+
+
+routes\+: This stores information regarding paths. 
+
+~\newline
+ \mbox{\Hypertarget{namespace_evaluation_a31921850ec05527e190a920ded214d71}\label{namespace_evaluation_a31921850ec05527e190a920ded214d71}} 
+\index{Evaluation@{Evaluation}!rr@{rr}}
+\index{rr@{rr}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{rr}{rr}}
+{\footnotesize\ttfamily Evaluation.\+rr = list()}
+
+
+
+rr\+: This signifies the y-\/coordinate of the particular node. 
+
+~\newline
+ \mbox{\Hypertarget{namespace_evaluation_a01c81e46aa0488ff6f175ca57f0b66e4}\label{namespace_evaluation_a01c81e46aa0488ff6f175ca57f0b66e4}} 
+\index{Evaluation@{Evaluation}!V@{V}}
+\index{V@{V}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{V}{V}}
+{\footnotesize\ttfamily int Evaluation.\+V = 5}
+
+
+
+V\+: This defines the total number of vehicles that will traverse the path. 
+
+\mbox{\Hypertarget{namespace_evaluation_afcdf91b4ee8a20031b1bddb69fad4748}\label{namespace_evaluation_afcdf91b4ee8a20031b1bddb69fad4748}} 
+\index{Evaluation@{Evaluation}!verticalalignment@{verticalalignment}}
+\index{verticalalignment@{verticalalignment}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{verticalalignment}{verticalalignment}}
+{\footnotesize\ttfamily Evaluation.\+verticalalignment}
+
+\mbox{\Hypertarget{namespace_evaluation_a70f9cd7c636cc0004db3585899e8cb1b}\label{namespace_evaluation_a70f9cd7c636cc0004db3585899e8cb1b}} 
+\index{Evaluation@{Evaluation}!x@{x}}
+\index{x@{x}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily Evaluation.\+x}
+
+
+
+x,y\+: They signify the coordinates of a particular node. 
+
+x,y\+: They signify the coordinates of a particular node. \mbox{\Hypertarget{namespace_evaluation_a9890166cf9fe5342882dc76926b876ca}\label{namespace_evaluation_a9890166cf9fe5342882dc76926b876ca}} 
+\index{Evaluation@{Evaluation}!y@{y}}
+\index{y@{y}!Evaluation@{Evaluation}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily Evaluation.\+y}
+

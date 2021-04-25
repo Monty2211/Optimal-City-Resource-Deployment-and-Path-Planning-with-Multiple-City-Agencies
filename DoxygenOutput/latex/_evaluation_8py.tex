@@ -1,0 +1,101 @@
+\hypertarget{_evaluation_8py}{}\doxysection{Evaluation.\+py File Reference}
+\label{_evaluation_8py}\index{Evaluation.py@{Evaluation.py}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_evaluation}{Evaluation}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespace_evaluation_a9d1fb96966bd17f03d4b577a0260e472}{Evaluation.\+dist\+\_\+from}} (loc1, loc2)
+\begin{DoxyCompactList}\small\item\em @dist\+\_\+from Calculates the distance between the provided node coordinates. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespace_evaluation_ae5d1fa94ebdd07289861895a26cd605b}{Evaluation.\+get\+\_\+next\+\_\+loc}} (initial)
+\begin{DoxyCompactList}\small\item\em @get\+\_\+next\+\_\+loc This provides with the next coordinates for the next node in the path. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespace_evaluation_a8b9d4471305180176004dcc6e11e996d}{Evaluation.\+create\+\_\+data\+\_\+model}} ()
+\begin{DoxyCompactList}\small\item\em @ package create\+\_\+data\+\_\+model Stores the data for the problem. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespace_evaluation_a869afb036c2e2a5e25091b04e2a93345}{Evaluation.\+print\+\_\+solution}} (data, manager, routing, solution)
+\begin{DoxyCompactList}\small\item\em @print\+\_\+solution Prints solution on console. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespace_evaluation_a61d419a668703ce3a9ce0705a89d8f63}{Evaluation.\+main}} ()
+\begin{DoxyCompactList}\small\item\em @main Solve the CVRP problem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_evaluation_ae0d2735beeef1d6b1344a24514eaa1e6}{Evaluation.\+G}} = nx.\+random\+\_\+geometric\+\_\+graph(15, 0.\+3)
+\begin{DoxyCompactList}\small\item\em G\+: This is where the definition of the graph is stored. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_adb8bde94b5037c9810055bfb6aea9f2e}{Evaluation.\+pos}} = nx.\+get\+\_\+node\+\_\+attributes(G, \char`\"{}pos\char`\"{})
+\begin{DoxyCompactList}\small\item\em pos\+: Details and attributes of G are stored here. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_evaluation_a91f1aeb93f765cc3633615b050db0b30}{Evaluation.\+dmin}} = 1
+\begin{DoxyCompactList}\small\item\em dmin\+: Least amount needed to break the loop. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_evaluation_a608d909793bd3b0ab338b01c8801708d}{Evaluation.\+ncenter}} = 0
+\begin{DoxyCompactList}\small\item\em ncenter\+: Updating the node center after each calculation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a70f9cd7c636cc0004db3585899e8cb1b}{Evaluation.\+x}}
+\begin{DoxyCompactList}\small\item\em x,y\+: They signify the coordinates of a particular node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a9890166cf9fe5342882dc76926b876ca}{Evaluation.\+y}}
+\item 
+tuple \mbox{\hyperlink{namespace_evaluation_a432a0694974e9ac36c6f223acac9facb}{Evaluation.\+d}} = (x -\/ 0.\+5) $\ast$$\ast$ 2 + (y -\/ 0.\+5) $\ast$$\ast$ 2
+\begin{DoxyCompactList}\small\item\em d\+: This stores the calculation of the equation which uses coordinates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_aa89412fca919cfe1d8463d95247e28fc}{Evaluation.\+p}} = dict(nx.\+single\+\_\+source\+\_\+shortest\+\_\+path\+\_\+length(G, ncenter))
+\begin{DoxyCompactList}\small\item\em p\+: This is a dictionary which stores node information. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a853f1d0dce0df059211ef2431f28d799}{Evaluation.\+figsize}}
+\begin{DoxyCompactList}\small\item\em figsize\+: This controls the endproduct of the figure. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a1e206ff095f94e4b2e7c3d74ff01c754}{Evaluation.\+nodelist}}
+\item 
+\mbox{\hyperlink{namespace_evaluation_abc5cf0a632065a0702ae9fb445164185}{Evaluation.\+alpha}}
+\item 
+\mbox{\hyperlink{namespace_evaluation_a164776849eb0cc93fd516c3dbd62aded}{Evaluation.\+node\+\_\+size}}
+\begin{DoxyCompactList}\small\item\em nodesize\+: This defines the size of the node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a970e692882e3112c8f230dfa7218c953}{Evaluation.\+node\+\_\+color}}
+\begin{DoxyCompactList}\small\item\em nodecolour\+: This defines the colour of the node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_aff3603c2259a5c5efb27964f10f00d76}{Evaluation.\+cmap}}
+\begin{DoxyCompactList}\small\item\em cmap\+: This stores the final figure plot information \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_afa4c60dd525e6fbb825312940dbef610}{Evaluation.\+ll}} = list()
+\begin{DoxyCompactList}\small\item\em ll\+: This signifies the x-\/coordinate of the particular node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a31921850ec05527e190a920ded214d71}{Evaluation.\+rr}} = list()
+\begin{DoxyCompactList}\small\item\em rr\+: This signifies the y-\/coordinate of the particular node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a8672bc4c5b9f52eeb204a30b0f6a3540}{Evaluation.\+df}} = pd.\+Data\+Frame()
+\begin{DoxyCompactList}\small\item\em df\+: This declares an empty dataframe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a885b4f6289756efff78075470460349a}{Evaluation.\+distances\+\_\+df}} = df.\+iloc\mbox{[}\+:,4\+:4183\mbox{]}
+\begin{DoxyCompactList}\small\item\em distances\+\_\+df\+: This stores the dataframe information of the sliced columns. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a280825293be27e67f595cab46b6dab45}{Evaluation.\+locations}} = dict( ( ID, (df.\+loc\mbox{[}ID, \textquotesingle{}Left\textquotesingle{}\mbox{]}, df.\+loc\mbox{[}ID, \textquotesingle{}Right\textquotesingle{}\mbox{]}) ) for ID in df.\+index)
+\begin{DoxyCompactList}\small\item\em locations\+: This stores the nodes along with their coordinates in the form of a dictionary. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a9575e390bd04345f54194a4f8c785df0}{Evaluation.\+lo}} = locations\mbox{[}l\mbox{]}
+\begin{DoxyCompactList}\small\item\em l\+: It iterates over every instance of the locations dictionary \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_ad79cbabce3967c4d6ae316dfc1d9c452}{Evaluation.\+l}}
+\item 
+\mbox{\hyperlink{namespace_evaluation_a4891bac01cc75e10639ba2c9bc8b8385}{Evaluation.\+horizontalalignment}}
+\item 
+\mbox{\hyperlink{namespace_evaluation_afcdf91b4ee8a20031b1bddb69fad4748}{Evaluation.\+verticalalignment}}
+\item 
+\mbox{\hyperlink{namespace_evaluation_a1563c94ff5f94917b7a5f936f2f099f7}{Evaluation.\+df1}} = pd.\+Data\+Frame()
+\begin{DoxyCompactList}\small\item\em df1\+: This declares an empty dataframe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a9b3ad1b73757396cb3062832163d09de}{Evaluation.\+distance}} = df1
+\begin{DoxyCompactList}\small\item\em distance\+: This stores values and date from df1. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a72c37976232b2693dd2d66e58f115cbe}{Evaluation.\+distances}} = dict( ((l1,l2), distance.\+iloc\mbox{[}l1, l2\mbox{]} ) for l1 in locations for l2 in locations if l1!=l2)
+\begin{DoxyCompactList}\small\item\em distances\+: This is a dictionary that stores distances from each node with all other nodes. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_evaluation_a01c81e46aa0488ff6f175ca57f0b66e4}{Evaluation.\+V}} = 5
+\begin{DoxyCompactList}\small\item\em V\+: This defines the total number of vehicles that will traverse the path. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a462e306f48f153f2df20c64f50481a19}{Evaluation.\+prob}} = Lp\+Problem(\char`\"{}vehicle\char`\"{}, Lp\+Minimize)
+\begin{DoxyCompactList}\small\item\em prob\+: This initializes the problem that will run using provided constraints. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a405008817741bb522ab78c6ef1409efe}{Evaluation.\+indicator}} = Lp\+Variable.\+dicts(\textquotesingle{}indicator\textquotesingle{},distances, 0,1,Lp\+Binary)
+\begin{DoxyCompactList}\small\item\em indicator\+: This defines the variable dictionary consisting of distances and indicates if location i is connected to location j along route \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a261b8424619e745c6f8a83e9eeb6cf73}{Evaluation.\+eliminator}} = Lp\+Variable.\+dicts(\textquotesingle{}eliminator\textquotesingle{}, df.\+ID, 0, len(df.\+ID)-\/1, Lp\+Integer)
+\begin{DoxyCompactList}\small\item\em eliminator\+: This defines the variable dictionary consisting of the node ID\textquotesingle{}s and elimiate subtours \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a9e81b980d71f45a3f0e8724473f17f22}{Evaluation.\+cost}} = lp\+Sum(\mbox{[}indicator\mbox{[}(i,j)\mbox{]}$\ast$distances\mbox{[}(i,j)\mbox{]} for (i,j) in distances\mbox{]})
+\begin{DoxyCompactList}\small\item\em cost\+: This stores the result of distances calculations. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_evaluation_a069a3aabf0571d51c5c6fcc8a1836589}{Evaluation.\+cap}} = 7 else V
+\begin{DoxyCompactList}\small\item\em cap\+: This considers a particular node at a time. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_evaluation_a13ecd37916f23fbf678fd4a6a1d6a4cc}{Evaluation.\+num}} = len(df.\+ID)/V
+\begin{DoxyCompactList}\small\item\em num\+: This stores the result of the number of nodes and the number of vehicles. \end{DoxyCompactList}\item 
+list \mbox{\hyperlink{namespace_evaluation_a4ec0c3505dea59bb08cde5d469e6a6d9}{Evaluation.\+feasible\+\_\+edges}} = \mbox{[} e for e in indicator if value(indicator\mbox{[}e\mbox{]}) != 0 \mbox{]}
+\begin{DoxyCompactList}\small\item\em feasibleedges\+: This stores values of edges after the calculations are done. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{namespace_evaluation_aed4d1d61ccf65b1c295900b73e523a63}{Evaluation.\+routes}} = get\+\_\+next\+\_\+loc(7)
+\begin{DoxyCompactList}\small\item\em routes\+: This stores information regarding paths. \end{DoxyCompactList}\item 
+list \mbox{\hyperlink{namespace_evaluation_aad7dcce2362e186be9cbf19d69e64e4b}{Evaluation.\+coloured\+\_\+loc}} = \mbox{[}np.\+random.\+rand(3) for i in range(len(routes))\mbox{]}
+\begin{DoxyCompactList}\small\item\em coloured\+\_\+loc\+: This stores information according to individual paths. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_evaluation_a1ac107dfeea63a174e1d85be80558386}{Evaluation.\+l1}}
+\item 
+\mbox{\hyperlink{namespace_evaluation_adc2d04eaa51292b5308fc646af447e75}{Evaluation.\+l2}}
+\item 
+\mbox{\hyperlink{namespace_evaluation_a2a6e6eb7cde3b47e7a1f79048f4991a4}{Evaluation.\+color}}
+\end{DoxyCompactItemize}
