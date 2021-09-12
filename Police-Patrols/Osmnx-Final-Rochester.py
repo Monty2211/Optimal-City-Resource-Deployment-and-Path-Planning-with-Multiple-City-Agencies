@@ -2,9 +2,12 @@ import osmnx as ox
 import pandas as pd
 import matplotlib.pyplot as plt
 
+# Rough map of Rochester
 rochester_city = ox.geocode_to_gdf('Rochester, NY, USA')
 ax = ox.project_gdf(rochester_city).plot()
 _ = ax.axis('off')
+
+# Node visibility
 rochester_graph = ox.graph_from_place('Rochester, NY, USA', network_type='drive')
 ox.plot_graph(rochester_graph)
 
@@ -25,7 +28,7 @@ ox.plot.plot_graph(G, bgcolor='#FFFFFF', node_color=colors[0], edge_color='gray'
 count=0
 for i in G.nodes:
     count=count+1
-print("The number of nodes within the selected location")
+print("The number of nodes within the selected location: River Bend Shelter - Highland park boxed area")
 print(count)
 
 # Storing nodes in dataframe
