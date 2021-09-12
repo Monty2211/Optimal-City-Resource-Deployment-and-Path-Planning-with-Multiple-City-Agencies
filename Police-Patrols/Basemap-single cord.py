@@ -33,6 +33,6 @@ map.drawmapboundary(fill_color='lightblue')
 # build and plot coordinates onto map
 lat, long = map(sample_cords[1], sample_cords[0])
 map.plot(lat, long, marker='D', color='r')
-plt.title("Rochester, NY Police Patrol Locations")
-plt.savefig('Patrolling_area.png', format='png', dpi=500)
+plt.title("Area according to specifed coordinate")
+plt.savefig('SampleArea.png', format='png', dpi=500)
 plt.show()
