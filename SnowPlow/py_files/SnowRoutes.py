@@ -6,13 +6,8 @@ import random, math
 
 %matplotlib inline
 
-import matplotlib.pyplot as plt
-import geopandas as gpd
-import pysal as ps
-
-
-import pandas as pd
 import osmnx as ox
+## city: plots a basic map of the city
 city = ox.geocode_to_gdf('Washington, D.C.')
 ax = ox.project_gdf(city).plot()
 _ = ax.axis('off')
@@ -38,21 +33,27 @@ from scipy.spatial.distance import squareform
 
 gpd.io.file.fiona.drvsupport.supported_drivers['KML'] = 'rw'
 my_map = gpd.read_file('Snow_Removal_Areas.kml', driver='KML')
+## my_map: the collection of the boundaries of the KML file
 my_map
 
+## polys: empty list of polygons
 polys = []
+## coordinates: empty list of coordinates
 coordinates = []
 
 for i in range( len(my_map)):
     polys.append(my_map.iloc[i])
     coordinates.append(polys[i][2])
 
+## Graphs: empty list of graphs
 Graphs = []
 
 from datetime import datetime
 
+## now: used to check the time
 now = datetime.now()
 
+## current_time: used to convert time from now to a readable format
 current_time = now.strftime("%H:%M:%S")
 print("Current Time =", current_time)
 
@@ -76,7 +77,7 @@ Graphs2 = Graphs.copy()
 now = datetime.now()
 current_time = now.strftime("%H:%M:%S")
 print("Current Time =", current_time)
-
+# acquiring the graphs  from the polygons
 for i in range(len(Graphs)):
     G_proj = ox.project_graph(Graphs[i])
     dense = ox.consolidate_intersections(G_proj, rebuild_graph=False, tolerance=15, dead_ends=False)
@@ -118,7 +119,7 @@ print("Current Time =", current_time)
 
 eccentricities = []
 neighbors = []
-
+# converting the graphs to densegraphs
 for i in range(len(idenseGraphs)):
     eccentricities.append(idenseGraphs[i].eccentricity(vertices=None, mode='in'))
     neighbors.append(idenseGraphs[i].neighborhood(vertices=None, order=1, mode='all', mindist=0))
@@ -154,10 +155,12 @@ tuples = [tuple(x) for x in subset.to_numpy()]
 len(tuples)
 
 
+## arrayofTuples: array dividing the Tuples into equal parts
 arrayofTuples = numpy.array_split(tuples, 5)
+## arrayofEccentricity: array dividing the Eccentricitiesc into equal parts
 arrayofEccentricity = numpy.array_split(eccentricities[0], 5)
 
-
+# Creating a priority set class
 class PrioritySet(object):
 
     def __init__(self):
@@ -187,7 +190,7 @@ class PrioritySet(object):
     def __getitem__(self, index):
         return self.heap[index]
 
-
+# Creating a position class
 class Position:
 
     def __init__(self,x,y):
@@ -203,7 +206,7 @@ class Position:
     def y_coor(self):
         return self.y
 
-
+# Creating a vehicle class
 class Vehicle:
 
     def __init__(self, capacity):
@@ -211,7 +214,7 @@ class Vehicle:
 
     def capacity(self):
         return self.capacity
-
+# Creating a node class
 class Node:
 
     pos = Position(-1,-1)
@@ -230,11 +233,14 @@ class Node:
         return "( " + str(self.pos.x) + " , " + \
                    str(self.pos.y) + " )"
 
-
+##@copy
+# copies the list
 def copy(li):
     return [i for i in li]
 
 
+##@getProb
+#returns a random probability
 def getProb():
     return random.random()
 
@@ -244,6 +250,8 @@ def get_random(li):
     return li[index]
 
 
+##@get_distance
+#acquire the euclidean distance
 def get_distance(cus1, cus2):
     # Euclideian
     # change to vincenty later
@@ -252,6 +260,8 @@ def get_distance(cus1, cus2):
     return dist
 
 
+##@print_tuple
+# function to print the tuples
 def print_tuple(t):
     #     print( "0"),
     for i in t:
@@ -261,6 +271,8 @@ def print_tuple(t):
 
 #     print (" -> f: " + str(get_fitness(t)))
 
+##@print_population
+# prints the population
 def print_population(p):
     for i in p:
         for c in i:
@@ -276,7 +288,8 @@ def print_population_heap(p):
         count += 1
         print("\n")
 
-
+##@mutate
+# mutation function
 def mutate(chromosome):
     temp = [i for i in chromosome]
 
@@ -285,8 +298,8 @@ def mutate(chromosome):
         right = random.randint(left, len(temp) - 1)
         temp[left], temp[right] = temp[right], temp[left]
     return temp
-
-
+##@crossover
+# crossover function
 def crossover(a, b):
     if getProb() < CROSSOVER_RATE:
         left = random.randint(1, len(a) - 2)
@@ -302,7 +315,8 @@ def crossover(a, b):
 
     return a, b
 
-
+##@get_fitness
+# getting the fitness of the solution
 def get_fitness(li):
     num_custo = len(li)
     fitness = 0
@@ -368,14 +382,11 @@ DEPOT = None
 CAPACITY = 100
 INF = float("inf")
 
-
+##@Genetic_Algo
+# the definition of the genetic algorithm
 def Genetic_Algo():
-
-#     print ("POPULATION GENERATED... EVOLUTION BEGINING ...")
     minimum_chrom = h[0]
-#     print( "Curr Min: ", minimum_chrom[0])
     count = 0
-    # while h[0][0] > 1800:
     while count < 1000:
         ax = h.pop()
         bx = h.pop()
@@ -412,7 +423,8 @@ def Genetic_Algo():
     print(count)
 
 
-
+##@create_data_array
+#creating the array of data that is to be used for the genetic algorithm
 def create_data_array():
     locations = arrayofTuples[0]
 
