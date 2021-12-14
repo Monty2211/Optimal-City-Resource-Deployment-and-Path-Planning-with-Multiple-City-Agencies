@@ -45,6 +45,23 @@ Generates paths based on synthetic graphs and number of vehicles
     - locations.csv
     - trial_Loop.json
 - DoxygenOutput
+- DoxygenOutput2
+- SnowPlow
+    - Data
+    - Diagrammatic Outputs
+    - HTML Routes
+    - Notebooks
+    - py_files
+- Garabage Pickup
+    - Dataset
+    - .py files
+    - .ipynb notebooks
+    - Images
+- Police Patrol
+    - datasets
+    - images
+    - jupyter-notebook
+    - py_files   
 
 
 
@@ -56,7 +73,7 @@ Extract the zipped files
 
 Install the following for [LPRoute.py](https://github.com/Monty2211/Optimal-City-Resource-Deployment-and-Path-Planning-with-Multiple-City-Agencies/blob/main/PyFiles/LPRoute.py) 
 ```
-pip install pandas numpy pulp networkx haversine matplotlib
+pip install pandas numpy pulp networkx haversine matplotlib osmnx 
 ```
 This file uses synthetic graphs (which are in the form of Random Geometric Graphs RGG) as its input and prints the routes that can be taken by 'V' vehicles. In addition to the route paths for each vehicle this code also indicates whether or not there is an optimal solution given a synthetic graph and if there isn't one, it prints "infeasible solution". 
 It also generates the enumerated nodes, total number of iterations, time taken in terms  of CPU seconds and wall clock seconds.
@@ -72,6 +89,55 @@ To see these paths and outputs in more detail, see Routes with synthetic graph.i
 
 Install the following for [Evaluation.py](https://github.com/Monty2211/Optimal-City-Resource-Deployment-and-Path-Planning-with-Multiple-City-Agencies/blob/main/PyFiles/Evaluation.py)
 
+
+
+```
+python SnowRoutes.py
+```  
+    
+The python file is used to obtain the routes for the snow plowers. It employs the genetic algorithm and is able to output a list of nodes as well as the routes to take in order to traverse the routes. The routes are displayed in HTML files. For different plowers, different routes are displayed. 
+
+
+
+```
+python GarbagePickupRoutes.py
+```  
+    
+This file demonstrates the model and routes for the Garbage Pickup Domain. Before running the file, you will have to download all the dependencies listed in the import statements. To run this file, type GarbagePickupRoutes.py in cmd. After running, first you will see the bounding boxes and then the finished routes. After closing that, the model will start running and will give you the output in the form of another figure, in which you see the paths that connect all the nodes with their coordinates. After that, you see the connection of all the bounding boxes to each other. Next, you see the disposal site locations as well as the map that visualizes them. In the end, you see the main route linked to the nearest disposal site.
+
+
+
+```
+python PolicePatrollingFinalRochester.py
+```  
+This file demonstrates the working of the model used and output for each bounding box and the combined bounding box made with NetworkX.
+The closest police station is found and mapped to the area selected in the image where we see a clear path traversal from the closest police station (in 261 Child St) to the area (Arnett).
+
+
+
+Under Jupyter Notebooks– the main ones
+
+```
+OSMNX-Rochester-Map.ipynb
+```  
+This notebook displays the usage of OSMnx to obtain city coordinates conveniently.
+
+```
+Time-for-nearest-police-and-bounded-box.ipynb 
+```  
+This notebook shows the bounding boxes selected and combined, traversed from the nearest police station and the time being calculated for that patrolled path
+
+```
+Police Station Site Analysis.ipynb
+```  
+This notebook shows the 9 police stations plotted in the city of Rochester
+
+```
+Police Patrol Path Planning Demo.ipynb
+```  
+This notebook was used during the demo which included everything
+
+
 ```
 pip install pandas numpy pulp networkx haversine matplotlib ortools
 ```
@@ -80,6 +146,7 @@ Before running the file, you will have to download all the dependencies - OR-too
 
 Running [Evaluation.py](https://github.com/Monty2211/Optimal-City-Resource-Deployment-and-Path-Planning-with-Multiple-City-Agencies/blob/main/PyFiles/Evaluation.py)  
 To run this file, enter the following in command line
+
 ```
 python Evaluation.py
 ```
@@ -103,4 +170,4 @@ python routes_geoJson.py
 ```
 To see these paths and outputs, open the Hyper-Text Markup Language <html> file that is created in the AdditionalFiles folder by the name of indexFinal.
 
-
+    
