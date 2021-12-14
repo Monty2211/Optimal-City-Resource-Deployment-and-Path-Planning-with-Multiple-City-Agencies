@@ -1,3 +1,10 @@
+#  PolicePatrollingFinalRochester-Python_File.
+#  This file demonstrates the working of the model used and output for each bounding box and
+#  the combined bounding box made with NetworkX
+#  The closest police station is found and mapped to the area selected in the image
+
+
+
 import osmnx as ox
 import matplotlib.pyplot as plt
 import pandas as pd
