@@ -1,14 +1,12 @@
-#  Evaluation_Python_File. 
-#  This file demonstrates the model and the results that are generated for the same. 
-#  Before runnning the file, you will have to download all the dependencies - ortools is the most important here.
-#  To run this file, type Evaluation.py in cmd
-#  After running, first you will see the synthetic graph that is created. After closing that, the model will 
-#  start running and will give you the output in the form of another figure, in which you will see the paths that
-#  connect all the nodes with their coordinates. After this, you will then see evaluation model being run.
-#  This evaluation is done with the help of Google's OR-Tools. At the end, you will see the paths that
-#  were evaluated using OR-Tools. You can see the paths created from our model as well.
-#  This code is running both our model and Google's model on the same synthetic graph.
-#  For graphs and figures that explain more about results, see Evaluation-Results.ipynb
+#  GarbagePickupRoutes_Python_File. 
+#  This file demonstrates the model and routes for the Garbage Pickup Domain. 
+#  Before runnning the file, you will have to download all the dependencies listed in the import statements.
+#  To run this file, type GarbagePickupRoutes.py in cmd
+#  After running, first you will see the bounding boxes and then the finished routes. After closing that, the model will 
+#  start running and will give you the output in the form of another figure, in which you see the paths that
+#  connect all the nodes with their coordinates. After that, you see the connection of all the bounding boxes
+#  to each other. Next, you see the disposal site locations as well as the map that visualizes them.
+#  In the end, you see the main route linked to the nearest disposal site.
 
 import osmnx as ox
 import matplotlib.pyplot as plt
